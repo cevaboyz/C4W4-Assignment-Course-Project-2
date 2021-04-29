@@ -1,6 +1,6 @@
-dir.create("./course_project_2")
+dir.create("./course_project_2_2")
 
-setwd("./course_project_2")
+setwd("./course_project_2_2")
 
 
 install.packages("lubridate")
