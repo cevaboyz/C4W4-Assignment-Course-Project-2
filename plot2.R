@@ -53,11 +53,9 @@ colors <- c("firebrick1", "gold1", "darkorange1", "greenyellow")
 
 
 
-png(filename = "plot2.png", width = 16, height = 12 , units = "cm", res = 600 )
+png(filename = "plot2.png", width = 700, height = 700 , units = "px")
 
-plot2<-barplot(height=total_emissions/1000, names.arg=year_names, ylim=c(0,4),
-               xlab="Years", ylab=expression('total PM'[2.5]*' emission in kilotons'),
-               main=expression('Total PM'[2.5]*' emissions in Baltimore City-MD in kilotons'),col=colors)
+plot2<-barplot(height=total_emissions/1000, names.arg=year_names, ylim=c(0,4), xlab="Years", ylab=expression('total PM'[2.5]*' emission in kilotons'), main=expression('Total PM'[2.5]*' emissions in Baltimore City-MD in kilotons'), col=colors)
 
 text(x = plot2 , y = round(total_emissions/1000,2), label = round(total_emissions/1000,2), pos = 3, cex = 0.8, col = "black")
 
