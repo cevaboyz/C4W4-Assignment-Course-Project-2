@@ -44,3 +44,24 @@ twoohoheight_emissions <- sum(twoohoheight$Emissions)
 
 
 
+total_emissions <- c(triplenine_emissions,twoohohtwo_emissions,twoohohfive_emissions,twoohoheight_emissions)
+
+year_names <- c("1999", "2002", "2005", "2008")
+
+
+colors <- c("firebrick1", "darkorange1", "gold1", "greenyellow")
+
+
+png(filename = "plot1.png", width = 16, height = 12 , units = "cm", res = 600 )
+
+plot1 <- barplot(height = total_emissions/1000, names = year_names, xlab = "Years", ylab= expression('total PM'[2.5]*' emission in kilotons'),ylim=c(0,8000), main=expression('Total PM'[2.5]*' emissions at various years in kilotons'),col=colors)
+
+text(x = plot1 , y = round(total_emissions/1000,2), label = round(total_emissions/1000,2), pos = 3, cex = 0.8, col = "black")
+
+dev.off()
+
+#ending
+
+
+
+
